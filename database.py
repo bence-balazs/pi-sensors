@@ -15,7 +15,7 @@ try:
         port=os.environ.get("pg.port"),
     )
 except:
-    logger.logErrors("database connection was refused")
+    logger.logErrors("database: connection was refused")
     sys.exit(1)
 
 cursor = conn.cursor()
