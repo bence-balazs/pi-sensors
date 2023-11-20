@@ -12,7 +12,7 @@ def main():
         database.insertToDb("uptime", uptime)
     except:
         database.closeDb
-        logger.logErrors("uptime: FAILED to insert in to the database")
+        logger.logErrors("uptime.py: FAILED to insert in to the database")
         sys.exit(1)
 
 if __name__ == "__main__":
