@@ -1,8 +1,9 @@
 from gpiozero import CPUTemperature
 
 def main():
-    cpu_temp = format(CPUTemperature(), '.1f')
-    print(cpu_temp)
+    sensor = format(CPUTemperature(), '.1f')
+    cpu = format(sensor.temperature, '.1f')
+    print(cpu)
 
 if __name__ == "__main__":
     main()
