@@ -1,5 +1,6 @@
 from gpiozero import CPUTemperature
 import database
+import logger
 import sys
 
 def main():
@@ -11,6 +12,7 @@ def main():
     except:
         print("Error: wrong insert!")
         database.closeDb
+        logger.logErrors("FAILED to insert in to the database")
         sys.exit(1)
 
     database.closeDb()
