@@ -19,7 +19,3 @@ def closeDb():
 def insertToDb(table, value):
     cursor.execute(f"INSERT into {table} (temp) VALUES ({value});")
     conn.commit()
-
-def queryDb(table):
-    cursor.execute(f"SELECT * from {table}")
-    print(cursor.fetchall())
