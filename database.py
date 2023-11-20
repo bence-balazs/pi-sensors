@@ -21,7 +21,7 @@ except:
 cursor = conn.cursor()
 
 def insertToDb(table, value):
-    cursor.execute(f"INSERT into {table} (temp) VALUES ({value});")
+    cursor.execute(f"INSERT into {table} (value) VALUES ({value});")
     conn.commit()
 
 def closeDb():
