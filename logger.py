@@ -1,7 +1,7 @@
 import datetime
 
-def logErrors(message):
-    f = open("./logs/cpu_temp.log", "a")
+def logErrors(file, message):
+    f = open("./logs/pi-sensors.log", "a")
     time = datetime.datetime.now()
 
     f.write(str(time.strftime("[%Y-%m-%d] %H:%M:%S")))
