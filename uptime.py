@@ -5,7 +5,7 @@ import os
 
 def main():
     uptime = os.popen("awk '{print $1}' /proc/uptime").read()
-    uptime = int(uptime)
+    uptime = float(uptime)
     uptime = float(format((uptime / 60) / 60, '.1f'))
 
     try:
