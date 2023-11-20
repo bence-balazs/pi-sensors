@@ -1,6 +1,6 @@
 import datetime
 
-def logErrors(file, message):
+def logErrors(message):
     f = open("./logs/pi-sensors.log", "a")
     time = datetime.datetime.now()
 
