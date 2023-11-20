@@ -1,4 +1,5 @@
 from gpiozero import CPUTemperature
+from database import insertToDb
 
 def main():
     sensor = CPUTemperature()
