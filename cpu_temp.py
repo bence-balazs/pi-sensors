@@ -1,10 +1,19 @@
 from gpiozero import CPUTemperature
-from database import insertToDb
+import database
+import sys
 
 def main():
     sensor = CPUTemperature()
     cpu = format(sensor.temperature, '.1f')
-    print(cpu)
+    
+    try:
+        database.insertToDb("cpu_temp", cpu)
+    except:
+        print("Error: wrong insert!")
+        database.closeDb
+        sys.exit(1)
+
+    database.closeDb()
 
 if __name__ == "__main__":
     main()

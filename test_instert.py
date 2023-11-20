@@ -1,5 +1,4 @@
 import database
-import os
 import sys
 
 def main():
