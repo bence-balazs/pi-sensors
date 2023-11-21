@@ -10,7 +10,6 @@ def main():
     try:
         database.insertToDb("cpu_temp", cpu)
     except:
-        print("Error: wrong insert!")
         database.closeDb
         logger.logErrors("cpu_temp.py: FAILED to insert in to the database")
         sys.exit(1)
