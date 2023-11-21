@@ -29,7 +29,6 @@ def main():
         database.insertToDb("dht22_temp", temperature_c)
         database.insertToDb("dht22_hum", humidity)
     except:
-        print("Error: wrong insert!")
         database.closeDb
         logger.logErrors("dht22_sens.py: FAILED to insert in to the database")
         sys.exit(1)
